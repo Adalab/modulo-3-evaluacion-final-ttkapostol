@@ -9,7 +9,7 @@ function characterList({ characterList }) {
   });
   return (
     <section>
-      <ul className="list">{cardHtml}</ul>
+      <ul className="render__list">{cardHtml}</ul>
     </section>
   );
 }

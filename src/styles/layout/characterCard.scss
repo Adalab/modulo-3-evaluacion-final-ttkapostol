@@ -1,8 +1,22 @@
-card {
-  &__img {
+.card {
+  border: 2px solid black;
+  text-align: center;
+  width: 220px;
+  &__link--img {
+    height: 220px;
+    width: 160px;
+    object-fit: contain;
   }
-  &__title {
+  &__link--title {
+    font-size: 16px;
+    font-weight: 700;
   }
-  &__span {
+  &__link--span {
+    font-size: 14px;
+    text-transform: capitalize;
   }
+}
+
+.card-link {
+  text-decoration: none;
 }
