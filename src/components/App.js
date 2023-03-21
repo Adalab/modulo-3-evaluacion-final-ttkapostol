@@ -1,9 +1,13 @@
 /* SECCIÓN DE IMPORT */
 import { useEffect, useState } from "react";
-import CallToApi from "../services/api";
-import Filters from "./Filters/Filters";
-import "../styles/App.scss";
 import { Route, Routes } from "react-router-dom";
+
+import CallToApi from "../services/api";
+
+import Filters from "./Filters/Filters";
+import CharacterList from "./Characters/CharacterList";
+
+import "../styles/App.scss";
 
 function App() {
   /* VARIABLES ESTADO (DATOS) */
@@ -15,7 +19,6 @@ function App() {
   useEffect(() => {
     CallToApi(selectedHouse).then((selectedData) => {
       setCharacterList(selectedData);
-      console.log(characterList);
     });
   }, [selectedHouse]);
 
@@ -54,11 +57,16 @@ function App() {
               <Route
                 path="/"
                 element={
-                  <Filters
-                    searchByCharacter={searchByCharacter}
-                    handleSearchByCharacter={handleSearchByCharacter}
-                    handleSelectedHouse={handleSelectedHouse}
-                  ></Filters>
+                  <>
+                    <Filters
+                      searchByCharacter={searchByCharacter}
+                      handleSearchByCharacter={handleSearchByCharacter}
+                      handleSelectedHouse={handleSelectedHouse}
+                    ></Filters>
+                    <CharacterList
+                      characterList={filteredCharacters}
+                    ></CharacterList>
+                  </>
                 }
               ></Route>
             </Routes>
