@@ -10,8 +10,8 @@ function Filters({
     <section>
       <form>
         <FilterByCharacter
-          handleSearchByName={handleSearchByCharacter}
-          searchByName={searchByCharacter}
+          handleSearchByCharacter={handleSearchByCharacter}
+          searchByCharacter={searchByCharacter}
         />
         <FilterByHouse handleSelectedHouse={handleSelectedHouse} />
       </form>

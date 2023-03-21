@@ -1,5 +1,5 @@
 function FilterByCharacter({ handleSearchByCharacter, searchByCharacter }) {
-  const handleChange = (ev) => {
+  const handleInput = (ev) => {
     const value = ev.target.value;
     handleSearchByCharacter(value);
   };
@@ -11,11 +11,10 @@ function FilterByCharacter({ handleSearchByCharacter, searchByCharacter }) {
       </label>
       <input
         className="form__input"
-        autoComplete="off"
         type="search"
         name="search"
         value={searchByCharacter}
-        onChange={handleChange}
+        onInput={handleInput}
       />
     </>
   );

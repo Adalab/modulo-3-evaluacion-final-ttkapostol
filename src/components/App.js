@@ -1,4 +1,3 @@
-/* SECCIÓN DE IMPORT */
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
@@ -10,19 +9,15 @@ import CharacterList from "./Characters/CharacterList";
 import "../styles/App.scss";
 
 function App() {
-  /* VARIABLES ESTADO (DATOS) */
   const [characterList, setCharacterList] = useState([]);
   const [searchByCharacter, setSearchByCharacter] = useState("");
   const [selectedHouse, setSelectedHouse] = useState("Gryffindor");
 
-  /* EFECTOS (código cuando carga la página) */
   useEffect(() => {
     CallToApi(selectedHouse).then((selectedData) => {
       setCharacterList(selectedData);
     });
   }, [selectedHouse]);
-
-  /* FUNCIONES HANDLER */
 
   const handleSearchByCharacter = (value) => {
     setSearchByCharacter(value);
@@ -32,12 +27,10 @@ function App() {
     setSelectedHouse(value);
   };
 
-  /* FUNCIONES Y VARIABLES AUXILIARES PARA PINTAR EL HTML */
-
   const filteredCharacters = characterList
     .filter((eachCharacter) => {
       return eachCharacter.name
-        .toLocaleLowerCase()
+        .toLowerCase()
         .includes(searchByCharacter.toLowerCase());
     })
     .filter((eachCharacter) => {
