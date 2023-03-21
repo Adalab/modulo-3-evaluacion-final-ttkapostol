@@ -1,26 +1,42 @@
 /* SECCIÓN DE IMPORT */
+import { useEffect, useState } from "react";
+import CallToApi from "../services/api";
+import "../styles/App.scss";
 
-// - De React
-// - Nuestros
-// - Sass
-import '../styles/App.scss';
-// - Imágenes
-
-/* SECCIÓN DEL COMPONENTE */
 function App() {
   /* VARIABLES ESTADO (DATOS) */
+  const [characterList, setCharacterList] = useState([]);
+  const [searchByName, setSearchByName] = useState("");
+  const [selectHouse, setSelectHouse] = useState("Gryffindor");
 
   /* EFECTOS (código cuando carga la página) */
+  useEffect(() => {
+    CallToApi().then((selectedData) => {
+      setCharacterList(selectedData);
+      console.log(characterList);
+    });
+  }, []);
 
   /* FUNCIONES HANDLER */
 
   /* FUNCIONES Y VARIABLES AUXILIARES PARA PINTAR EL HTML */
 
   /* HTML */
-  return <div className="App">{/* Aquí va el HTML */}</div>;
+  return (
+    <div className="App">
+      {
+        <>
+          <header className="header">
+            <h1>Harry Potter</h1>
+          </header>
+          <main className="main"></main>
+          <footer className="footer"></footer>
+        </>
+      }
+    </div>
+  );
 }
 
 /* PROP-TYPES */
 
-/* EXPORT DEL COMPONENTE */
 export default App;
