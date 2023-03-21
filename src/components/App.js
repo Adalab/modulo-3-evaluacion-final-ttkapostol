@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation, matchPath } from "react-router-dom";
 
 import CallToApi from "../services/api";
 
 import Filters from "./Filters/Filters";
 import CharacterList from "./Characters/CharacterList";
+import CharacterDetails from "./Characters/CharacterDetails";
 
 import "../styles/App.scss";
 
@@ -37,6 +38,14 @@ function App() {
       return eachCharacter.house === selectedHouse;
     });
 
+  const { pathname } = useLocation();
+  const characterUrl = matchPath("/character/:characterId", pathname);
+  const characterId =
+    characterUrl !== null ? characterUrl.params.characterId : null;
+  const foundCharacter = characterList.find(
+    (character) => character.id === characterId
+  );
+
   /* HTML */
   return (
     <div className="App">
@@ -60,6 +69,14 @@ function App() {
                       characterList={filteredCharacters}
                     ></CharacterList>
                   </>
+                }
+              ></Route>
+              <Route
+                path="/character/:characterId"
+                element={
+                  <CharacterDetails
+                    foundCharacter={foundCharacter}
+                  ></CharacterDetails>
                 }
               ></Route>
             </Routes>
