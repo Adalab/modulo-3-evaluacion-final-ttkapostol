@@ -1,4 +1,4 @@
-function FilterByHouse({ handleSelectedHouse }) {
+function FilterByHouse({ handleSelectedHouse, selectedHouse }) {
   const handleChange = (ev) => {
     const value = ev.target.value;
     handleSelectedHouse(value);
@@ -13,6 +13,7 @@ function FilterByHouse({ handleSelectedHouse }) {
         name="Houses"
         id="Houses"
         title="Select a Hogwarts House"
+        value={selectedHouse}
         onChange={handleChange}
       >
         <option value="Gryffindor">Gryffindor</option>

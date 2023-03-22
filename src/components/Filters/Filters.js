@@ -5,6 +5,7 @@ function Filters({
   handleSearchByCharacter,
   searchByCharacter,
   handleSelectedHouse,
+  selectedHouse,
 }) {
   const handleSubmit = (ev) => {
     ev.preventDefault();
@@ -17,7 +18,10 @@ function Filters({
           handleSearchByCharacter={handleSearchByCharacter}
           searchByCharacter={searchByCharacter}
         />
-        <FilterByHouse handleSelectedHouse={handleSelectedHouse} />
+        <FilterByHouse
+          handleSelectedHouse={handleSelectedHouse}
+          selectedHouse={selectedHouse}
+        />
       </form>
     </section>
   );

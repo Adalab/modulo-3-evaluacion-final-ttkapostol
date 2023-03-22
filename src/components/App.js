@@ -75,6 +75,7 @@ function App() {
                       searchByCharacter={searchByCharacter}
                       handleSearchByCharacter={handleSearchByCharacter}
                       handleSelectedHouse={handleSelectedHouse}
+                      selectedHouse={selectedHouse}
                     ></Filters>
                     <CharacterList
                       characterList={filteredCharacters}
