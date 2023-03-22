@@ -13,6 +13,7 @@ function App() {
   const [characterList, setCharacterList] = useState([]);
   const [searchByCharacter, setSearchByCharacter] = useState("");
   const [selectedHouse, setSelectedHouse] = useState("Gryffindor");
+  //const [characterErrorMsg, setCharacterErrorMsg] = useState("");
 
   useEffect(() => {
     CallToApi(selectedHouse).then((selectedData) => {
@@ -37,17 +38,6 @@ function App() {
     .filter((eachCharacter) => {
       return eachCharacter.house === selectedHouse;
     });
-
-  //   filteredCharacters.length ? filteredCharacters : <p>
-  //       <img
-  //          src="https://i.postimg.cc/xdLvm1T7/no-picture-1.png"
-  //          alt="We don't have this character in our collection yet"
-  //          title="We don't have this character in our collection yet"
-  //        />
-  //       We don't have this character in our collection yet...
-  //     </p>
-  //   );
-  // }
 
   const { pathname } = useLocation();
   const characterUrl = matchPath("/character/:characterId", pathname);
@@ -78,7 +68,7 @@ function App() {
                       selectedHouse={selectedHouse}
                     ></Filters>
                     <CharacterList
-                      characterList={filteredCharacters}
+                      filteredCharacters={filteredCharacters}
                     ></CharacterList>
                   </>
                 }
