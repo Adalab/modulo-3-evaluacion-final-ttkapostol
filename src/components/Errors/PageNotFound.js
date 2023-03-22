@@ -9,7 +9,7 @@ const PageNotFound = () => {
       <img
         alt="Page or Hero not Found"
         title="Page or Hero not Found"
-        src="https://i.postimg.cc/xdLvm1T7/no-picture-1.png"
+        src="https://i.postimg.cc/GmVDFMsM/no-picture-2.png"
       />
     </article>
   );

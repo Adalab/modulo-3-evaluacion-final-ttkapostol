@@ -10,7 +10,7 @@ const CallToApi = (selectedHouse) => {
           house: eachCharacter.house,
           photo:
             eachCharacter.image ||
-            `https://i.postimg.cc/xdLvm1T7/no-picture-1.png`,
+            `https://i.postimg.cc/GmVDFMsM/no-picture-2.png`,
           species: eachCharacter.species,
           status: eachCharacter.alive,
           gender: eachCharacter.gender,
