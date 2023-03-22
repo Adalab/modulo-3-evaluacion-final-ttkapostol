@@ -13,6 +13,7 @@ function FilterByCharacter({ handleSearchByCharacter, searchByCharacter }) {
         className="form__input"
         type="search"
         name="search"
+        placeholder="Ex. Luna"
         value={searchByCharacter}
         onInput={handleInput}
       />
