@@ -1,22 +1,36 @@
 import { Link } from "react-router-dom";
+import "../../styles/layout/characterDetails.scss";
 
 function CharacterDetails({ foundCharacter }) {
   return (
-    <main>
+    <main className="detailsMain">
       <Link to="/">
-        <button>Return</button>
+        <button className="btn">Return to the list of Characters</button>
       </Link>
-      <article>
+      <article className="detArticle">
         <img
           src={foundCharacter.photo}
           alt={`Picture of ${foundCharacter.name}`}
           title={`Picture of ${foundCharacter.name}`}
+          className="detArticle__img"
         />
-        <h2>{foundCharacter.name}</h2>
-        <p>Hogwarts House: {foundCharacter.house}</p>
-        <p>Status: {foundCharacter.status ? "Alive" : "Dead"}</p>
-        <p>Gender: {foundCharacter.gender}</p>
-        <p>Species: {foundCharacter.species}</p>
+        <div className="detArticle__detDiv">
+          <h2 className="detDiv__h2">{foundCharacter.name}</h2>
+          <ul className="detDiv__list">
+            <li className="detDiv__list--item">
+              Hogwarts House: {foundCharacter.house}
+            </li>
+            <li className="detDiv__list--item">
+              Status: {foundCharacter.status ? "Alive" : "Dead"}
+            </li>
+            <li className="detDiv__list--item">
+              Gender: {foundCharacter.gender}
+            </li>
+            <li className="detDiv__list--item">
+              Species: {foundCharacter.species}
+            </li>
+          </ul>
+        </div>
       </article>
     </main>
   );
