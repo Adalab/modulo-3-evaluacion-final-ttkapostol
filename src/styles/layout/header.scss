@@ -1,0 +1,10 @@
+.header {
+  height: 200px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__img {
+    height: 180px;
+  }
+}

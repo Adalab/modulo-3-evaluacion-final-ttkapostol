@@ -6,6 +6,7 @@ import CallToApi from "../services/api";
 import Filters from "./Filters/Filters";
 import CharacterList from "./Characters/CharacterList";
 import CharacterDetails from "./Characters/CharacterDetails";
+import Header from "./Header";
 
 import "../styles/App.scss";
 
@@ -53,9 +54,7 @@ function App() {
     <div className="App">
       {
         <>
-          <header className="header">
-            <h1>Harry Potter</h1>
-          </header>
+          <Header />
           <main className="main">
             <Routes>
               <Route
