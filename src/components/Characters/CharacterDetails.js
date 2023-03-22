@@ -14,7 +14,7 @@ function CharacterDetails({ foundCharacter }) {
         />
         <h2>{foundCharacter.name}</h2>
         <p>Hogwarts House: {foundCharacter.house}</p>
-        <p>Status: {foundCharacter.alive ? "Alive" : "Dead"}</p>
+        <p>Status: {foundCharacter.status ? "Alive" : "Dead"}</p>
         <p>Gender: {foundCharacter.gender}</p>
         <p>Species: {foundCharacter.species}</p>
       </article>

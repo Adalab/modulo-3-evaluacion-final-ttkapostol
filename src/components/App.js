@@ -37,7 +37,8 @@ function App() {
     })
     .filter((eachCharacter) => {
       return eachCharacter.house === selectedHouse;
-    });
+    })
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   const { pathname } = useLocation();
   const characterUrl = matchPath("/character/:characterId", pathname);

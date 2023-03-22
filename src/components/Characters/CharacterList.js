@@ -14,7 +14,7 @@ function characterList({ filteredCharacters }) {
   });
   return (
     <section>
-      <p>{characterErrorMsg}</p>
+      <p className="render__msg">{characterErrorMsg}</p>
       <ul className="render__list">{cardHtml}</ul>
     </section>
   );
