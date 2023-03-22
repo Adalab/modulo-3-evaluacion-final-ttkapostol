@@ -3,6 +3,7 @@ import { Route, Routes, useLocation, matchPath } from "react-router-dom";
 
 import CallToApi from "../services/api";
 
+import PageNotFound from "./Errors/PageNotFound";
 import Filters from "./Filters/Filters";
 import CharacterList from "./Characters/CharacterList";
 import CharacterDetails from "./Characters/CharacterDetails";
@@ -14,7 +15,6 @@ function App() {
   const [characterList, setCharacterList] = useState([]);
   const [searchByCharacter, setSearchByCharacter] = useState("");
   const [selectedHouse, setSelectedHouse] = useState("Gryffindor");
-  //const [characterErrorMsg, setCharacterErrorMsg] = useState("");
 
   useEffect(() => {
     CallToApi(selectedHouse).then((selectedData) => {
@@ -81,6 +81,7 @@ function App() {
                   ></CharacterDetails>
                 }
               ></Route>
+              <Route path="*" element={<PageNotFound />}></Route>
             </Routes>
           </main>
           <footer className="footer"></footer>
