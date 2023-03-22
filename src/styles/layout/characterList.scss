@@ -1,7 +1,20 @@
 .render {
   &__list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 200px;
+    align-items: center;
+    justify-content: center;
     list-style: none;
+    gap: 7px;
+    margin: 10px;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 250px 250px 250px;
+      gap: 8px;
+    }
+    @media (min-width: 1200px) {
+      grid-template-columns: 290px 290px 290px 290px;
+      gap: 14px;
+    }
   }
 }

@@ -1,22 +1,37 @@
-.card {
-  border: 2px solid black;
-  text-align: center;
-  width: 220px;
-  &__link--img {
-    height: 220px;
-    width: 160px;
-    object-fit: contain;
-  }
-  &__link--title {
-    font-size: 16px;
-    font-weight: 700;
-  }
-  &__link--span {
-    font-size: 14px;
-    text-transform: capitalize;
-  }
-}
-
-.card-link {
+.link {
   text-decoration: none;
+  display: inline-block;
+
+  &__card {
+    text-decoration: none;
+    vertical-align: top;
+    border-radius: 8px;
+    background-color: black;
+    text-align: center;
+    margin: 0 10px;
+    padding-top: 10px;
+    height: 280px;
+    @media (min-width: 1200px) {
+      margin: 0 30px;
+    }
+
+    &--img {
+      height: 220px;
+    }
+
+    &--title {
+      text-decoration: none;
+      color: white;
+      font-family: "Neucha", cursive;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    &--span {
+      color: white;
+      font-family: "Neucha", cursive;
+      font-size: 12px;
+      text-transform: capitalize;
+    }
+  }
 }

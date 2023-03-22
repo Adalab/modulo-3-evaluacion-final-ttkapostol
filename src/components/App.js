@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Route, Routes, useLocation, matchPath } from "react-router-dom";
 
 import CallToApi from "../services/api";
-
 import PageNotFound from "./Errors/PageNotFound";
 import Filters from "./Filters/Filters";
 import CharacterList from "./Characters/CharacterList";

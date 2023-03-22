@@ -3,18 +3,18 @@ import "../../styles/layout/characterCard.scss";
 
 function CharacterCard({ eachCharacter }) {
   return (
-    <li className="card">
-      <Link classname="card__link" to={`/character/${eachCharacter.id}`}>
+    <Link classname="link" to={`/character/${eachCharacter.id}`}>
+      <li className="link__card">
         <img
-          className="card__link--img"
+          className="link__card--img"
           src={eachCharacter.photo}
           alt={`Picture of ${eachCharacter.name}`}
           title={`Picture of ${eachCharacter.name}`}
         ></img>
-        <h3 className="card__link--title">{eachCharacter.name}</h3>
-        <span className="card__link--span">{eachCharacter.species}</span>
-      </Link>
-    </li>
+        <h3 className="link__card--title">{eachCharacter.name}</h3>
+        <span className="link__card--span">{eachCharacter.species}</span>
+      </li>
+    </Link>
   );
 }
 export default CharacterCard;
