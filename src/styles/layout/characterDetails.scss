@@ -67,14 +67,20 @@
     }
     &__img {
       height: 220px;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
     &__detDiv {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
+  }
+
+  .detDiv__house {
+    align-self: center;
+    height: 100px;
+    width: 100px;
   }
 
   .detDiv__h2 {
