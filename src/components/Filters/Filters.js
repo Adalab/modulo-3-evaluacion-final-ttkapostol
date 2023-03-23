@@ -1,5 +1,6 @@
 import FilterByHouse from "./FilterByHouse";
 import FilterByCharacter from "./FilterByCharacter";
+import "../../styles/layout/filters.scss";
 
 function Filters({
   handleSearchByCharacter,
@@ -12,16 +13,20 @@ function Filters({
   };
 
   return (
-    <section>
-      <form onSubmit={handleSubmit}>
-        <FilterByCharacter
-          handleSearchByCharacter={handleSearchByCharacter}
-          searchByCharacter={searchByCharacter}
-        />
-        <FilterByHouse
-          handleSelectedHouse={handleSelectedHouse}
-          selectedHouse={selectedHouse}
-        />
+    <section className="filters">
+      <form className="form" onSubmit={handleSubmit}>
+        <fieldset className="form__fieldset1">
+          <FilterByCharacter
+            handleSearchByCharacter={handleSearchByCharacter}
+            searchByCharacter={searchByCharacter}
+          />
+        </fieldset>
+        <fieldset className="form__fieldset2">
+          <FilterByHouse
+            handleSelectedHouse={handleSelectedHouse}
+            selectedHouse={selectedHouse}
+          />
+        </fieldset>
       </form>
     </section>
   );

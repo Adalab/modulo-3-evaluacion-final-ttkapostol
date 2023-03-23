@@ -1,3 +1,5 @@
+import "../../styles/layout/filters.scss";
+
 function FilterByHouse({ handleSelectedHouse, selectedHouse }) {
   const handleChange = (ev) => {
     const value = ev.target.value;
@@ -6,13 +8,14 @@ function FilterByHouse({ handleSelectedHouse, selectedHouse }) {
 
   return (
     <>
-      <label className="form__label--select" htmlFor="houses">
+      <label className="form__fieldset2--label" htmlFor="houses">
         Select a Hogwarts House:
       </label>
       <select
         name="Houses"
         id="Houses"
         title="Select a Hogwarts House"
+        className="form__fieldset2--select"
         value={selectedHouse}
         onChange={handleChange}
       >

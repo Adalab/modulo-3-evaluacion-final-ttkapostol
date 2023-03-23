@@ -65,7 +65,7 @@ function CharacterDetails({ foundCharacter }) {
               Hogwarts House: {foundCharacter.house}
             </li>
             <li className="detDiv__list--item">
-              Status: {foundCharacter.status ? "Alive" : "Dead"}
+              Status: {foundCharacter.status ? "Alive 😊" : "Dead 💀"}
             </li>
             <li className="detDiv__list--item">
               Gender: {foundCharacter.gender}

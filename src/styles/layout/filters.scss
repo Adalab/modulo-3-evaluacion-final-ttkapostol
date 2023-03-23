@@ -1,0 +1,32 @@
+.filters {
+  margin: 15px auto;
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    &__fieldset1 {
+      border: none;
+      &--label {
+        font-weight: 900;
+        margin-right: 10px;
+      }
+      &--input {
+        padding: 5px;
+        border-radius: 4px;
+      }
+    }
+    &__fieldset2 {
+      border: none;
+      &--label {
+        font-weight: 900;
+        margin-right: 10px;
+      }
+      &--select {
+        padding: 5px;
+        border-radius: 4px;
+      }
+    }
+  }
+}
