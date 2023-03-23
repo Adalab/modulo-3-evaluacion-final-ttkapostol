@@ -74,6 +74,7 @@ function App() {
                     ></Filters>
                     <CharacterList
                       filteredCharacters={filteredCharacters}
+                      searchByCharacter={searchByCharacter}
                     ></CharacterList>
                   </>
                 }
