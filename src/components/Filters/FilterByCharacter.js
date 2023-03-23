@@ -18,6 +18,7 @@ function FilterByCharacter({ handleSearchByCharacter, searchByCharacter }) {
         placeholder="Ex. Luna"
         value={searchByCharacter}
         onInput={handleInput}
+        autoComplete="off"
       />
     </>
   );

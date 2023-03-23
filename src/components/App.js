@@ -48,6 +48,11 @@ function App() {
     (character) => character.id === characterId
   );
 
+  const handleReset = () => {
+    setSearchByCharacter("");
+    setSelectedHouse("Gryffindor");
+  };
+
   /* HTML */
   return (
     <div className="App">
@@ -65,6 +70,7 @@ function App() {
                       handleSearchByCharacter={handleSearchByCharacter}
                       handleSelectedHouse={handleSelectedHouse}
                       selectedHouse={selectedHouse}
+                      handleReset={handleReset}
                     ></Filters>
                     <CharacterList
                       filteredCharacters={filteredCharacters}

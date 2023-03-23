@@ -7,6 +7,7 @@ function Filters({
   searchByCharacter,
   handleSelectedHouse,
   selectedHouse,
+  handleReset,
 }) {
   const handleSubmit = (ev) => {
     ev.preventDefault();
@@ -27,6 +28,12 @@ function Filters({
             selectedHouse={selectedHouse}
           />
         </fieldset>
+        <input
+          type="button"
+          value="Reset"
+          className="form__resetBtn"
+          onClick={handleReset}
+        />
       </form>
     </section>
   );
