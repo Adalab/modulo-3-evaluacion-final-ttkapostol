@@ -3,7 +3,7 @@ import "../../styles/layout/characterCard.scss";
 
 function CharacterCard({ eachCharacter }) {
   return (
-    <Link classname="link" to={`/character/${eachCharacter.id}`}>
+    <Link className="link" to={`/character/${eachCharacter.id}`}>
       <li className="link__card">
         <img
           className="link__card--img"

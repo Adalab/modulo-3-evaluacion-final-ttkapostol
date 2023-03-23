@@ -3,7 +3,6 @@
   display: inline-block;
 
   &__card {
-    text-decoration: none;
     vertical-align: top;
     border: 2px solid black;
     box-shadow: 0px 5px 5px black;
@@ -21,7 +20,6 @@
     }
 
     &--title {
-      text-decoration: none;
       color: black;
       font-family: "Neucha", cursive;
       font-size: 16px;

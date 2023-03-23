@@ -47,7 +47,7 @@ function CharacterDetails({ foundCharacter }) {
   };
   return (
     <main className="detailsMain">
-      <Link to="/">
+      <Link className="linkBtn" to="/">
         <button className="btn">Return to the list of Characters</button>
       </Link>
       <article className="detArticle">
