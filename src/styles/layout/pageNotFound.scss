@@ -1,0 +1,37 @@
+.container {
+  width: 300px;
+  margin: 50px auto;
+  border: solid 2px black;
+  border-radius: 8px;
+  box-shadow: 0px 5px 5px black;
+  padding: 5px;
+  .pageNotFound {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    &__title {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    &__text {
+      text-align: center;
+    }
+  }
+
+  .btn404 {
+    margin: 20px 40px;
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 0px 5px 5px black;
+  }
+  .btn404:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 0px 5px 5px #eeba2b;
+  }
+}
